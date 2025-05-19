@@ -70,6 +70,8 @@ class Meteor(pygame.sprite.Sprite):
             self.kill()
 
 
+
+
 # General setup
 
 pygame.init()
@@ -120,6 +122,9 @@ while running:
     display_surface.fill("darkgray")
 
     all_sprites.draw(display_surface)
+
+    # Test collision
+    player.rect.collidepoint(x, y)
 
     pygame.display.update()
 
