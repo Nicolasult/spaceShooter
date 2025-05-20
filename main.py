@@ -86,6 +86,7 @@ def display_score():
     text_surf = font.render(str(current_time), True, (240, 240, 240))
     text_rect = text_surf.get_frect(midbottom = (WINDOW_WIDTH / 2, WINDOW_HEIGHT - 50))
     display_surface.blit(text_surf, text_rect)
+    pygame.draw.rect(display_surface, (240, 240, 240), text_rect.inflate(20, 20).move(0, -6), 5, 10 )
 
 # General setup
 
@@ -146,6 +147,7 @@ while running:
     all_sprites.draw(display_surface)
 
     display_score()
+
     pygame.display.update()
 
 pygame.quit()
